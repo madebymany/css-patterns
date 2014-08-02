@@ -1,6 +1,6 @@
 # A CSS pattern library for Sass
 
-At Made by Many we love Sass and we love Bourbon. We use these technologies in alost every project we build and they give us a great base onto which we can build our CSS. 
+At Made by Many we love Sass and we love Bourbon. We use these technologies in almost every project we build and they give us a great base onto which we can build our CSS.
 
 In addition we've been compiling a library of common CSS patterns for some time now. We noticed that we were reusing different patterns to produce effects and layouts in all our projects and decided to break them out into reusable chunks.
 
@@ -44,7 +44,7 @@ Most of these patterns were developed by much smarter people than us and this li
 ```
 These patterns are a collection on Sass placeholders and mixins. Much like Bourbon, nothing will be added to your compiled CSS that you did not explicitly ``@include`` or ``@extend``.
 
-## Instlling with Bower
+## Installing with Bower
 
 ```
 $ bower install css-patterns --save
@@ -64,15 +64,15 @@ Replace ``bower_components/`` here with the name of your bower component directo
 $ npm install css-patterns --save
 ```
 
-The follwing was adapted directly from the excellent [node bourbon](https://github.com/lacroixdesign/node-bourbon) project.
+The following was adapted directly from the excellent [node-bourbon](https://github.com/lacroixdesign/node-bourbon) project.
 
-To use `css-patterns` with tools like gulp.js, Grunt, or directly with node-sass, provide the path to `css-patterns` in your Sass config.
+To use `css-patterns` with tools like Gulp, Grunt, or directly with node-sass, provide the path to `css-patterns` in your Sass config.
 
-The ``includePaths`` property returns an array of patterns's paths to use in your config.
+The ``includePaths`` property returns an array of pattern paths to use in your config.
 
 ```javascript
 var patterns = require('css-patterns');
-bourbon.includePaths // Array of patterns paths
+bourbon.includePaths // Array of pattern paths
 ```
 
 Now pass that array as a property to your Sass compilation function
@@ -84,7 +84,7 @@ var generatedCss = sass.renderSync({
 });
 ```
 
-In your root stylesheet imply include the following:
+In your root stylesheet include the following:
 
 ```scss
 @import "patterns";
@@ -111,14 +111,14 @@ Sometimes we require overflow on our clearfixed elements. This placeholder provi
 ```scss
 @extend %expand-click-area;
 ```
-Sometimes icons and small buttons need a slightly larger hit area, particularly on touch interfaces. This placeholder adds a before element that is 10px wider and taller than the parent element that increases the click area by 10 px in every direction. [Original technique found here](http://front-back.com/expand-clickable-areas-for-a-better-touch-experience).
+Sometimes icons and small buttons need a slightly larger hit area, particularly on touch interfaces. This placeholder adds a before element that increases the click area by 10px in every direction. [Original technique found here](http://front-back.com/expand-clickable-areas-for-a-better-touch-experience).
 
 ### %float-list;
 
 ```scss
 @extend %float-list;
 ```
-Extends unstyled list to remove the default styles from a list and it's children, and floats all the children left.
+Extends unstyled list to remove the default styles from a list and its children, and floats all the children left.
 
 This pattern adds the ``float:left`` style to list items using a child combinator (``> *``). For compatibility with IE<8 add the following to your list item CSS.
 
@@ -131,9 +131,9 @@ This pattern adds the ``float:left`` style to list items using a child combinato
 ```scss
 @include fluid-media-wrapper;
 ```
-The fluid media wrapper mixin provides the ability to maintain a consistent aspect ratio for video and media content while a llowing that content to scale to a maximum width in a responsive layout. 
+The fluid media wrapper mixin provides the ability to maintain a consistent aspect ratio for video and media content while allowing that content to scale to a maximum width in a responsive layout.
 
-The default parameters for the mixin will provide a 16x9 aspect ratio. Provide your own aspect ratio by passing parameters to the mixin. A 4:3 aspect ratio would be provided like this: 
+The default parameters for the mixin will provide a 16x9 aspect ratio. Provide your own aspect ratio by passing parameters to the mixin. A 4:3 aspect ratio would be provided like this:
 
 ```scss
 @include fluid-media-wrapper(4 3);
@@ -154,7 +154,7 @@ This pattern provides an accessible way to hide text where background images are
 ```scss
 @extend %inline-list;
 ```
-Extends unstyled list to remove the default styles from a list and it's children, and dislay's those children as ``inline-block`` elements. 
+Extends unstyled list to remove the default styles from a list and its children, and dislays those children as ``inline-block`` elements.
 
 This pattern adds the ``inline-block`` property to list items using a child combinator (``> *``). For compatibility with IE<8 add the following to your list item CSS.
 
@@ -186,7 +186,7 @@ The famous OOCSS media object given a BEM update.
 }
 ```
 
-```HTML
+```html
 <div class="component">
   <img src="path/to/img.jpg" class="component__image" />
   <div class="component__body">
@@ -211,7 +211,7 @@ The famous OOCSS media object given a BEM update.
 @extend %unbulleted-list;
 ```
 
-Removes buttet point styles from a list and it's children.
+Removes bullet point styles from a list and its children.
 
 ### %unstyled-anchor;
 
@@ -227,7 +227,7 @@ Removes text decoration and inherits the color of the parent.
 @extend %unstyled-input;
 ```
 
-Remove all browser styling from an input field.
+Remove all browser styling from an input or button.
 
 ### %unstyled-list;
 
@@ -235,7 +235,7 @@ Remove all browser styling from an input field.
 @extend %unstyled-list;
 ```
 
-Removes the default styles from a list and it's children.
+Removes the default styles from a list and its children.
 
 ### %vertical-align;
 
@@ -246,7 +246,7 @@ Removes the default styles from a list and it's children.
 
 Allows vertical centering of elements with unknown dimensions. Apply the ``%vertical-align`` placeholder to the class of the parent element and the ``%vertical-align__child`` placeholder to the class of the element that should be vertically aligned within it.
 
-[More information and the original techique can be found here](http://css-tricks.com/centering-in-the-unknown/).
+[More information and the original technique can be found here](http://css-tricks.com/centering-in-the-unknown/).
 
 ### %visually-hidden;
 
@@ -254,14 +254,13 @@ Allows vertical centering of elements with unknown dimensions. Apply the ``%vert
 @extend %visually-hidden;
 ```
 
-Visually hides elements without hiding them from screenreaders or crawlers. 
+Visually hides elements without hiding them from screen readers or crawlers.
 
 [Taken straight out of HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#visuallyhidden).
 
 ## Contributors
 
-[Andy Walker](https://github.com/ninjabiscuit),
-[Callum Jefferies](https://github.com/callum)
-[Chris Bell](https://github.com/cjbell88),
-[Nick Goward](https://github.com/NickGoward)
-
+* [Andy Walker](https://github.com/ninjabiscuit)
+* [Callum Jefferies](https://github.com/callum)
+* [Chris Bell](https://github.com/cjbell88),
+* [Nick Goward](https://github.com/NickGoward)
