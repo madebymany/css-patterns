@@ -1,6 +1,6 @@
 # A CSS pattern library for Sass
 
-At Made by Many we love Sass and we love Bourbon. we use these technologies in alost every project we build and they give us a great base onto which we can build our CSS. 
+At Made by Many we love Sass and we love Bourbon. We use these technologies in alost every project we build and they give us a great base onto which we can build our CSS. 
 
 In addition we've been compiling a library of common CSS patterns for some time now. We noticed that we were reusing different patterns to produce effects and layouts in all our projects and decided to break them out into reusable chunks.
 
@@ -64,7 +64,7 @@ Replace ``bower_components/`` here with the name of your bower component directo
 $ npm install css-patterns --save
 ```
 
-The follwing was adapted directly from the excellent [node bourbon](https://github.com/lacroixdesign/node-bourbon) project. The following instructions were also adapted from that project.
+The follwing was adapted directly from the excellent [node bourbon](https://github.com/lacroixdesign/node-bourbon) project.
 
 To use `css-patterns` with tools like gulp.js, Grunt, or directly with node-sass, provide the path to `css-patterns` in your Sass config.
 
