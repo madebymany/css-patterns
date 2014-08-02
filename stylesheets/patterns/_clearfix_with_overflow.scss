@@ -1,0 +1,13 @@
+%clearfix-with-overflow:before,
+%clearfix-with-overflow:after {
+  content: " ";
+  display: table;
+}
+
+%clearfix-with-overflow:after {
+  clear: both;
+}
+
+%clearfix-with-overflow {
+  *zoom: 1;
+}

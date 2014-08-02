@@ -1,0 +1,9 @@
+%float-list {
+  @extend %clearfix-with-overflow;
+  @extend %unstyled-list;
+}
+
+%float-list__item, // for <= IE8
+%float-list > * {
+  float: left;
+}

@@ -1,0 +1,67 @@
+@import 'patterns';
+
+.clearfix {
+  @extend %clearfix;
+  @extend %clearfix-with-overflow;
+}
+
+.expand-click-area {
+  @extend %expand-click-area;
+}
+
+.float-list {
+  @extend %float-list;
+}
+
+.fluid-media-wrapper {
+  @include fluid-media-wrapper;
+  @include fluid-media-wrapper(1 1);
+}
+
+.image-replacement {
+  @extend %image-replacement;
+}
+
+.inline-list {
+  @extend %inline-list;
+}
+
+.media-block {
+  @extend %media-block;
+  @extend %media-block__content;
+  @extend %media-block__aside-left;
+  @extend %media-block__aside-right;
+}
+
+.responsive-image {
+  @extend %responsive-image;
+}
+
+.unbulleted-list {
+  @extend %unbulleted-list;
+}
+
+.unstyled-anchor {
+  @extend %unstyled_anchor;
+}
+
+.unstyled-input {
+  @extend %unstyled-input;
+}
+
+.unstyled-list {
+  @extend %unstyled-list;
+}
+
+.vertical-align {
+  @extend %vertical-align;
+}
+
+.vertical-align__child {
+  @extend %vertical-align__child;
+}
+
+.visually-hidden {
+  @extend %visually-hidden;
+}
+

@@ -1,0 +1,14 @@
+%media-block,
+%media-block__content {
+  @extend %clearfix;
+}
+
+%media-block__aside-left {
+  float:left;
+  display:block;
+}
+
+%media-block__aside-right {
+  float:right;
+  display:block;
+}

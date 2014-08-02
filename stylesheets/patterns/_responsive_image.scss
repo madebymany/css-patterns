@@ -1,0 +1,8 @@
+%responsive-image {
+  display: block;
+}
+
+%responsive-image img {
+  width: 100%;
+  -ms-interpolation-mode: bicubic; // <= IE7
+}

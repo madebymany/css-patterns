@@ -1,0 +1,9 @@
+%inline-list {
+  @extend %unstyled-list;
+}
+
+%inline-list__item, // for <= IE8
+%inline_list > * {
+  display: inline-block;
+}
+

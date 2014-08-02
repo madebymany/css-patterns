@@ -1,0 +1,11 @@
+%vertical-align:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+%vertical-align__child {
+  display: inline-block;
+  vertical-align: middle;
+}
