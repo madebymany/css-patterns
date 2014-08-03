@@ -7,7 +7,8 @@ var sassdoc = require('gulp-sassdoc');
 gulp.task('docs', function() {
   return gulp.src('./stylesheets/patterns')
     .pipe(sassdoc({
-      dest: './docs'
+      dest: './docs',
+      package: './package.json'
     }));
 });
 

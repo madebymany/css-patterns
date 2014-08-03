@@ -102,5 +102,5 @@ In your root stylesheet include the following:
 
 * [Andy Walker](https://github.com/ninjabiscuit)
 * [Callum Jefferies](https://github.com/callum)
-* [Chris Bell](https://github.com/cjbell88),
+* [Chris Bell](https://github.com/cjbell88)
 * [Nick Goward](https://github.com/NickGoward)
