@@ -1,14 +1,25 @@
-%media-block,
-%media-block__content {
+/**
+ * Display an image beside some other content.
+ *
+ * [stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
+ *
+ * @requires {placeholder} clearfix
+ */
+
+%media-box {
+}
+
+%media-box,
+%media-box__content {
   @extend %clearfix;
 }
 
-%media-block__aside-left {
-  float:left;
-  display:block;
+%media-box__aside-left,
+%media-box__aside-right {
+  display: block;
+  float: left;
 }
 
-%media-block__aside-right {
-  float:right;
-  display:block;
+%media-box__aside-right {
+  float: right;
 }

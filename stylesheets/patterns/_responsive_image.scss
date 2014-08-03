@@ -1,8 +1,11 @@
+/**
+ * Scalable images.
+ *
+ * [css-tricks.com/rundown-of-handling-flexible-media](http://css-tricks.com/rundown-of-handling-flexible-media)
+ */
+
 %responsive-image {
   display: block;
-}
-
-%responsive-image img {
   width: 100%;
   -ms-interpolation-mode: bicubic; // <= IE7
 }

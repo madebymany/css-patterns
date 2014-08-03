@@ -1,11 +1,19 @@
-%vertical-align:after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
+/**
+ * Allows vertical centering of elements with unknown dimensions.
+ *
+ * [css-tricks.com/centering-in-the-unknown](http://css-tricks.com/centering-in-the-unknown)
+ */
+
+%vertical-align {
 }
 
+%vertical-align:after,
 %vertical-align__child {
   display: inline-block;
   vertical-align: middle;
+}
+
+%vertical-align:after {
+  content: "";
+  height: 100%;
 }

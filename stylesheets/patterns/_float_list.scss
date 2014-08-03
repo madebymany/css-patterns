@@ -1,3 +1,10 @@
+/**
+ * Extends `%unstyled-list` to remove the default styles from a list and its children, and floats all the children left.
+ *
+ * @requires {placeholder} clearfix-with-overflow
+ * @requires {placeholder} unstyled-list
+ */
+
 %float-list {
   @extend %clearfix-with-overflow;
   @extend %unstyled-list;

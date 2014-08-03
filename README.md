@@ -15,7 +15,7 @@ For instance, we tend to favour this approach with placeholders:
 }
 ```
 
-```HTML
+```html
 <ul class="my-list-element">
 </ul>
 ```
@@ -28,7 +28,7 @@ Rather than this one with additional classes:
 }
 ```
 
-```HTML
+```html
 <ul class="my-list-element inline-list">
 </ul>
 ```
@@ -70,14 +70,14 @@ To use `css-patterns` with tools like Gulp, Grunt, or directly with node-sass, p
 
 The ``includePaths`` property returns an array of pattern paths to use in your config.
 
-```javascript
+```js
 var patterns = require('css-patterns');
 bourbon.includePaths // Array of pattern paths
 ```
 
 Now pass that array as a property to your Sass compilation function
 
-```javascript
+```js
 var generatedCss = sass.renderSync({
   file: __dirname + '/my_sass_file.scss',
   includePaths: patterns.includePaths
@@ -89,174 +89,6 @@ In your root stylesheet include the following:
 ```scss
 @import "patterns";
 ```
-
-## Documentation
-
-### %clearfix
-
-```scss
-@extend %clearfix;
-```
-Most of the time when we use `%clearix` all that we require is ``overflow: hidden`` and that's all this placeholder does.
-
-### %clearfix-with-overflow;
-
-```scss
-@extend %clearfix-with-overflow;
-```
-Sometimes we require overflow on our clearfixed elements. This placeholder provides the clearfix used in [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate).
-
-### %expand-click-area;
-
-```scss
-@extend %expand-click-area;
-```
-Sometimes icons and small buttons need a slightly larger hit area, particularly on touch interfaces. This placeholder adds a before element that increases the click area by 10px in every direction. [Original technique found here](http://front-back.com/expand-clickable-areas-for-a-better-touch-experience).
-
-### %float-list;
-
-```scss
-@extend %float-list;
-```
-Extends unstyled list to remove the default styles from a list and its children, and floats all the children left.
-
-This pattern adds the ``float:left`` style to list items using a child combinator (``> *``). For compatibility with IE<8 add the following to your list item CSS.
-
-```scss
-@extend %float-list__item;
-```
-
-### fluid-media-wrapper;
-
-```scss
-@include fluid-media-wrapper;
-```
-The fluid media wrapper mixin provides the ability to maintain a consistent aspect ratio for video and media content while allowing that content to scale to a maximum width in a responsive layout.
-
-The default parameters for the mixin will provide a 16x9 aspect ratio. Provide your own aspect ratio by passing parameters to the mixin. A 4:3 aspect ratio would be provided like this:
-
-```scss
-@include fluid-media-wrapper(4 3);
-```
-
-[More info and the original technique can be found here](http://css-tricks.com/rundown-of-handling-flexible-media/).
-
-### %image-replacement;
-
-```scss
-@extend %image-replacement;
-```
-
-This pattern provides an accessible way to hide text where background images are used on that element. [More information and the original technique can be found here](http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/).
-
-### %inline-list;
-
-```scss
-@extend %inline-list;
-```
-Extends unstyled list to remove the default styles from a list and its children, and dislays those children as ``inline-block`` elements.
-
-This pattern adds the ``inline-block`` property to list items using a child combinator (``> *``). For compatibility with IE<8 add the following to your list item CSS.
-
-```scss
-@extend %inline-list__item;
-```
-
-### %media-block;
-
-```scss
-@extend %media-block;
-@extend %media-block__content;
-@extend %media-block__aside-left;
-@extend %media-block__aside-right;
-```
-The famous OOCSS media object given a BEM update.
-
-```scss
-.component {
-  @extend %media-block;
-}
-
-.component__body {
-  @extend %media-block__content;
-}
-
-.component__image {
-  @extend %media-block__aside-left;
-}
-```
-
-```html
-<div class="component">
-  <img src="path/to/img.jpg" class="component__image" />
-  <div class="component__body">
-    <!-- your content here -->
-  </div>
-</div>
-```
-
-[Click here for more info and the original technique](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/).
-
-### %responsive-image;
-
-```scss
-@extend %responsive-image;
-```
-
-[More info and the original technique can be found here](http://css-tricks.com/rundown-of-handling-flexible-media/).
-
-### %unbulleted-list;
-
-```scss
-@extend %unbulleted-list;
-```
-
-Removes bullet point styles from a list and its children.
-
-### %unstyled-anchor;
-
-```scss
-@extend %unstyled-anchor;
-```
-
-Removes text decoration and inherits the color of the parent.
-
-### %unstyled-input;
-
-```scss
-@extend %unstyled-input;
-```
-
-Remove all browser styling from an input or button.
-
-### %unstyled-list;
-
-```scss
-@extend %unstyled-list;
-```
-
-Removes the default styles from a list and its children.
-
-### %vertical-align;
-
-```scss
-@extend %vertical-align;
-@extend %vertical-align__child;
-```
-
-Allows vertical centering of elements with unknown dimensions. Apply the ``%vertical-align`` placeholder to the class of the parent element and the ``%vertical-align__child`` placeholder to the class of the element that should be vertically aligned within it.
-
-[More information and the original technique can be found here](http://css-tricks.com/centering-in-the-unknown/).
-
-### %visually-hidden;
-
-```scss
-@extend %visually-hidden;
-```
-
-Visually hides elements without hiding them from screen readers or crawlers.
-
-[Taken straight out of HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#visuallyhidden).
 
 ## Contributors
 

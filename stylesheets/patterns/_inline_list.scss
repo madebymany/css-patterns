@@ -1,3 +1,9 @@
+/**
+ * Extends `%unstyled-list` to remove the default styles from a list and its children, and dislays those children as ``inline-block`` elements.
+ *
+ * @requires {placeholder} unstyled-list
+ */
+
 %inline-list {
   @extend %unstyled-list;
 }
