@@ -1,0 +1,49 @@
+/**
+ * Display an image beside some other content.
+ *
+ * @link http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ *
+ * @requires {placeholder} clearfix
+ */
+
+%media-box {
+}
+
+%media-box,
+%media-box__content {
+  @extend %clearfix;
+}
+
+/**
+ * The content of the media box.
+ *
+ * @requires {placeholder} media-box
+ */
+
+%media-box__content {
+}
+
+%media-box__aside-left,
+%media-box__aside-right {
+  display: block;
+}
+
+/**
+ * The image (or other) of the media box, shown on the left of content.
+ *
+ * @requires {placeholder} media-box
+ */
+
+%media-box__aside-left {
+  float: left;
+}
+
+/**
+ * The image (or other) of the media box, shown on the right of content.
+ *
+ * @requires {placeholder} media-box
+ */
+
+%media-box__aside-right {
+  float: right;
+}

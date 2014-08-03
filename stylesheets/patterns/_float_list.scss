@@ -10,7 +10,16 @@
   @extend %unstyled-list;
 }
 
-%float-list__item, // for <= IE8
+%float-list__item, // <= IE8
 %float-list > * {
   float: left;
+}
+
+/**
+ * Use on list items in <= IE8
+ *
+ * @requires {placeholder} float-list
+ */
+
+%float-list__item {
 }
