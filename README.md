@@ -90,6 +90,14 @@ In your root stylesheet include the following:
 @import "patterns";
 ```
 
+## Contributing
+
+1. Add a new pattern with documentation
+2. Test docs locally with `gulp docs`
+3. Commit and push
+4. `gulp publish-docs`
+5. View at http://madebymany.github.io/css-patterns/
+
 ## Contributors
 
 * [Andy Walker](https://github.com/ninjabiscuit)
