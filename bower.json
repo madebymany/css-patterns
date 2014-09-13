@@ -1,7 +1,7 @@
 {
   "name": "css-patterns",
   "main": "./stylesheets/_patterns.scss",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "authors": [
     "Andrew Walker <andy@madebymany.co.uk>",
     "Callum Jefferies <callum@madebymany.co.uk>",

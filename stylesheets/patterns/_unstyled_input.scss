@@ -1,12 +1,23 @@
 /**
  * Strips browser styling from an input.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
  */
 
+@mixin unstyled-input($extend: true) {
+  @if $extend {
+    @extend %unstyled-input;
+  }
+  @else {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font: inherit;
+  }
+}
+
 %unstyled-input {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  font: inherit;
+  @include unstyled-input($extend: false);
 }

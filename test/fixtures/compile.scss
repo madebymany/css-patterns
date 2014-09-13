@@ -1,5 +1,9 @@
-@import 'patterns';
+@import "../../stylesheets/patterns";
 
 .test {
-  @extend %clearfix;
+  @include clearfix;
+
+  @media (min-width: 1px) {
+    @include clearfix(false);
+  }
 }

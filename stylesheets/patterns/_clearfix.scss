@@ -1,7 +1,18 @@
 /**
  * Standard clearfix.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
  */
 
+@mixin clearfix($extend: true) {
+  @if $extend {
+    @extend %clearfix;
+  }
+  @else {
+    overflow: hidden;
+  }
+}
+
 %clearfix {
-  overflow: hidden;
+  @include clearfix($extend: false);
 }

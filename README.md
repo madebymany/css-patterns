@@ -38,11 +38,27 @@ Most of these patterns were developed by much smarter people than us and this li
 ## How it works
 
 ```scss
-.my-class {
-  @extend %expand-click-area;
+.list {
+  @include unstyled-list;
 }
 ```
 These patterns are a collection on Sass placeholders and mixins. Much like Bourbon, nothing will be added to your compiled CSS that you did not explicitly ``@include`` or ``@extend``.
+
+We often want to `@extend` within a media query, so as of `0.1.0` we've implemented @HugoGiraudel's excellent technique to solve this problem. Example:
+
+```scss
+.list {
+  margin: 20px;
+}
+
+@media (min-width: 320px) {
+  .list {
+    @include unstyled-list(false);
+  }
+}
+```
+
+See http://hugogiraudel.com/2014/03/31/getting-the-most-out-of-sass-placeholders/.
 
 ## Installing with Bower
 
@@ -93,10 +109,11 @@ In your root stylesheet include the following:
 ## Contributing
 
 1. Add a new pattern with documentation
-2. Test docs locally with `gulp docs`
-3. Commit and push
-4. `gulp publish-docs`
-5. View at http://madebymany.github.io/css-patterns/
+2. Update tests to reflect your change and `npm test`
+3. Test docs locally with `gulp docs`
+4. Commit and push
+5. `gulp publish-docs`
+6. View at http://madebymany.github.io/css-patterns/
 
 ## Contributors
 
@@ -104,3 +121,9 @@ In your root stylesheet include the following:
 * [Callum Jefferies](https://github.com/callum)
 * [Chris Bell](https://github.com/cjbell88)
 * [Nick Goward](https://github.com/NickGoward)
+
+## Changelog
+
+### 0.1.0
+
+* Move to @HugoGiraudel's mixin technique. Backwards compatible.
