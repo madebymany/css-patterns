@@ -21,8 +21,8 @@
     "mocha": "~1.21.3",
     "node-sass": "~0.9.3",
     "gulp-gh-pages": "^0.3.3",
-    "gulp-sassdoc": "^1.0.1",
-    "gulp": "^3.8.7",
-    "sassdoc": "^1.6.0"
+    "gulp": "^3.8.8",
+    "sassdoc": "^1.6.0",
+    "gulp-sassdoc": "^1.0.1"
   }
 }
