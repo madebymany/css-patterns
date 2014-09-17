@@ -1,23 +1,44 @@
 /**
- * Extends `%unstyled-list` to remove the default styles from a list and its children, and dislays those children as ``inline-block`` elements.
+ * Use on list items in <= IE8
  *
- * @requires {placeholder} unstyled-list
+ * @param {Bool} $extend (true) - extend or include this pattern
  */
 
-%inline-list {
-  @extend %unstyled-list;
+@mixin inline-list__item($extend: true) {
+  @if $extend {
+    @extend %inline-list__item;
+  }
+  @else {
+    display: inline-block;
+  }
 }
 
-%inline-list__item, // for <= IE8
-%inline_list > * {
-  display: inline-block;
+%inline-list__item {
+  @include inline-list__item($extend: false);
 }
 
 /**
- * Use on list items in <= IE8
+ * Extends `unstyled-list` to remove the default styles from a list and its children, and dislays those children as ``inline-block`` elements.
  *
- * @requires {placeholder} inline-list
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
+ * @requires {mixin} inline-list__item
+ * @requires {mixin} unstyled-list
  */
 
-%inline-list__item {
+@mixin inline-list($extend: true) {
+  @if $extend {
+    @extend %inline-list;
+  }
+  @else {
+    @include unstyled-list($extend);
+
+    > * {
+      @include inline-list__item($extend);
+    }
+  }
+}
+
+%inline-list {
+  @include inline-list($extend: false);
 }

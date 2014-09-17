@@ -1,7 +1,7 @@
 {
   "name": "css-patterns",
   "title": "css-patterns",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A CSS pattern library for Sass",
   "main": "index.js",
   "directories": {

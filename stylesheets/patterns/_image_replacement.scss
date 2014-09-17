@@ -1,11 +1,22 @@
 /**
  * Provides an accessible way to hide text where background images are used on that element.
  *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
  * @link http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement
  */
 
+@mixin image-replacement($extend: true) {
+  @if $extend {
+    @extend %image-replacement;
+  }
+  @else {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
 %image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  @include image-replacement($extend: false);
 }

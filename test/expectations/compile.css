@@ -1,3 +1,144 @@
+/**
+ * Removes bullet point styles from a list and its children.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
+/**
+ * A list without styling.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
+/**
+ * Standard clearfix.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
 .test {
   overflow: hidden; }
 
+/**
+ * Clearfix with an overflow.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
+ * @link http://github.com/h5bp/html5-boilerplate
+ */
+/**
+ * Sometimes icons and small buttons need a slightly larger hit area, particularly on touch interfaces. This adds a before pseudo element that increases the click area by 10px in every direction.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
+ * @link http://front-back.com/expand-clickable-areas-for-a-better-touch-experience
+ */
+/**
+ * Use on list items in <= IE8
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
+/**
+ * Extends `unstyled-list` to remove the default styles from a list and its children, and floats all the children left.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
+ * @requires {mixin} float-list__item
+ * @requires {mixin} clearfix-with-overflow
+ * @requires {mixin} unstyled-list
+ */
+/**
+ * For use with `fluid-media-wrapper` where the child is not an `embed`, `iframe`, or `object` element.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
+/**
+ * A fluid media wrapper provides the ability to maintain a consistent aspect ratio for video and media content while allowing that content to scale to a maximum width in a responsive layout.
+ *
+ * @param {List} $ratio (16 9) - an aspect ratio to maintain
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
+ * @throws `$ratio` must be a list with two values.
+ *
+ * @requires {mixin} fluid-media-wrapper__media
+ */
+/**
+ * Provides an accessible way to hide text where background images are used on that element.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
+ * @link http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement
+ */
+/**
+ * Use on list items in <= IE8
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
+/**
+ * Extends `unstyled-list` to remove the default styles from a list and its children, and dislays those children as ``inline-block`` elements.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
+ * @requires {mixin} inline-list__item
+ * @requires {mixin} unstyled-list
+ */
+/**
+ * Display an image beside some other content.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
+ * @requires {mixin} clearfix
+ *
+ * @link http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ */
+/**
+ * The content of the media box.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
+/**
+ * The image (or other) of the media box, shown on the left of content.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
+/**
+ * The image (or other) of the media box, shown on the right of content.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
+/**
+ * Scalable images.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
+ * @link http://css-tricks.com/rundown-of-handling-flexible-media
+ */
+/**
+ * Displays an anchor as plain text.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
+/**
+ * Strips browser styling from an input.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
+/**
+ * Allows vertical centering of elements with unknown dimensions.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
+ * @link http://css-tricks.com/centering-in-the-unknown
+ */
+/**
+ * The element to be vertically centred.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ */
+/**
+ * Visually hides elements without hiding them from screen readers or crawlers.
+ *
+ * @param {Bool} $extend (true) - extend or include this pattern
+ *
+ * @link http://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#visuallyhidden
+ */
+@media (min-width: 1px) {
+  .test {
+    overflow: hidden; } }
