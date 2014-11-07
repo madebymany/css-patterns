@@ -88,7 +88,7 @@ The ``includePaths`` property returns an array of pattern paths to use in your c
 
 ```js
 var patterns = require('css-patterns');
-bourbon.includePaths // Array of pattern paths
+patterns.includePaths // Array of pattern paths
 ```
 
 Now pass that array as a property to your Sass compilation function
