@@ -4,13 +4,13 @@ At Made by Many we love Sass and we love Bourbon. We use these technologies in a
 
 In addition we've been compiling a library of common CSS patterns for some time now. We noticed that we were reusing different patterns to produce effects and layouts in all our projects and decided to break them out into reusable chunks.
 
-The way we write CSS tends to follow BEM syntax and closely resembles some OOCSS practices. However, we tend to favour using the Sass ``@extend`` method to add patterns to CSS rules, rather than littering our elements with multiple styles.
+The way we write CSS tends to follow BEM syntax and closely resembles some OOCSS practices. However, we tend to prefer using the Sass ``@include`` method to add patterns to CSS rules, rather than littering our elements with multiple styles.
 
 For instance, we tend to favour this approach with placeholders:
 
 ```scss
 .my-list-element {
-  @extend %inline-list;
+  @include inline-list;
   background:blue;
 }
 ```
@@ -44,7 +44,9 @@ Most of these patterns were developed by much smarter people than us and this li
 ```
 These patterns are a collection on Sass placeholders and mixins. Much like Bourbon, nothing will be added to your compiled CSS that you did not explicitly ``@include`` or ``@extend``.
 
-We often want to `@extend` within a media query, so as of `0.1.0` we've implemented @HugoGiraudel's excellent technique to solve this problem. Example:
+Unless specifically mentioned in the documentation, each pattern can be used as either a mixin with``@include`` or a placeholder with ``@extend``.
+
+In order to `@extend` a mixin within a media query, we've implemented @HugoGiraudel's excellent technique. Example:
 
 ```scss
 .list {

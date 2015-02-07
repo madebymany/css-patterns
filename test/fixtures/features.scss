@@ -8,14 +8,6 @@
   }
 }
 
-.clearfix-with-overflow {
-  @include clearfix-with-overflow;
-
-  @media (min-width: 1px) {
-    @include clearfix-with-overflow(false);
-  }
-}
-
 .expand-click-area {
   @include expand-click-area;
 
