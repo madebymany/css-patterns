@@ -8,7 +8,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec --recursive"
+    "test": "node_modules/.bin/mocha --reporter spec --recursive",
+    "docs": "gulp docs",
+    "publish-docs": "gulp publish-docs"
   },
   "author": "Andrew Walker <andy@madebymany.co.uk>",
   "contributors": [

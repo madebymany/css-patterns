@@ -112,9 +112,9 @@ In your root stylesheet include the following:
 
 1. Add a new pattern with documentation
 2. Update tests to reflect your change and `npm test`
-3. Test docs locally with `gulp docs`
+3. Test docs locally with `npm run docs`
 4. Commit and push
-5. `gulp publish-docs`
+5. `npm run publish-docs`
 6. View at http://madebymany.github.io/css-patterns/
 
 ## Contributors
