@@ -1,18 +1,14 @@
-/**
- * Use on list items in <= IE8
- */
+/// Use on list items in <= IE8
 
 @mixin float-list__item {
   float: left;
 }
 
-/**
- * Extends `unstyled-list` to remove the default styles from a list and its children, and floats all the children left.
- *
- * @requires {mixin} float-list__item
- * @requires {mixin} unstyled-list
- * @requires {mixin} clearfix
- */
+/// Extends `unstyled-list` to remove the default styles from a list and its children, and floats all the children left.
+///
+/// @requires {mixin} float-list__item
+/// @requires {mixin} unstyled-list
+/// @requires {mixin} clearfix
 
 @mixin float-list {
   @include clearfix;

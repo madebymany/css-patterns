@@ -1,8 +1,6 @@
-/**
- * A list without styling.
- *
- * @requires {mixin} unbulleted-list
- */
+/// A list without styling.
+///
+/// @requires {mixin} unbulleted-list
 
 @mixin unstyled-list {
   @include unbulleted-list;

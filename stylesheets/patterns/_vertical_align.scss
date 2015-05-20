@@ -1,8 +1,6 @@
-/**
- * Allows vertical centering of elements with unknown dimensions.
- *
- * @link http://css-tricks.com/centering-in-the-unknown
- */
+/// Allows vertical centering of elements with unknown dimensions.
+///
+/// @link http://css-tricks.com/centering-in-the-unknown
 
 @mixin vertical-align {
   &:after {
@@ -13,9 +11,7 @@
   }
 }
 
-/**
- * The element to be vertically centred.
- */
+/// The element to be vertically centred.
 
 @mixin vertical-align__child {
   &:after {

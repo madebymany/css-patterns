@@ -1,35 +1,27 @@
-/**
- * Display an image beside some other content.
- *
- * @requires {mixin} clearfix
- *
- * @link http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
- */
+/// Display an image beside some other content.
+///
+/// @requires {mixin} clearfix
+///
+/// @link http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
 
 @mixin media-box {
   @include clearfix;
 }
 
-/**
- * The content of the media box.
- */
+/// The content of the media box.
 
 @mixin media-box__content {
   @include clearfix;
 }
 
-/**
- * The image (or other) of the media box, shown on the left of content.
- */
+/// The image (or other) of the media box, shown on the left of content.
 
 @mixin media-box__aside-left {
   display: block;
   float: left;
 }
 
-/**
- * The image (or other) of the media box, shown on the right of content.
- */
+/// The image (or other) of the media box, shown on the right of content.
 
 @mixin media-box__aside-right {
   display: block;

@@ -1,17 +1,13 @@
-/**
- * Use on list items in <= IE8
- */
+/// Use on list items in <= IE8
 
 @mixin inline-list__item {
   display: inline-block;
 }
 
-/**
- * Extends `unstyled-list` to remove the default styles from a list and its children, and dislays those children as ``inline-block`` elements.
- *
- * @requires {mixin} inline-list__item
- * @requires {mixin} unstyled-list
- */
+/// Extends `unstyled-list` to remove the default styles from a list and its children, and dislays those children as ``inline-block`` elements.
+///
+/// @requires {mixin} inline-list__item
+/// @requires {mixin} unstyled-list
 
 @mixin inline-list {
   @include unstyled-list;

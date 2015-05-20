@@ -1,8 +1,6 @@
-/**
- * Sometimes icons and small buttons need a slightly larger hit area, particularly on touch interfaces. This adds a before pseudo element that increases the click area by 10px in every direction.
- *
- * @link http://front-back.com/expand-clickable-areas-for-a-better-touch-experience
- */
+/// Sometimes icons and small buttons need a slightly larger hit area, particularly on touch interfaces. This adds a before pseudo element that increases the click area by 10px in every direction.
+///
+/// @link http://front-back.com/expand-clickable-areas-for-a-better-touch-experience
 
 @mixin expand-click-area {
   position: relative;

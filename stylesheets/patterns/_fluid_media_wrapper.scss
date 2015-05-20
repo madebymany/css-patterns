@@ -1,6 +1,4 @@
-/**
- * For use with `fluid-media-wrapper` where the child is not an `embed`, `iframe`, or `object` element.
- */
+/// For use with `fluid-media-wrapper` where the child is not an `embed`, `iframe`, or `object` element.
 
 @mixin fluid-media-wrapper__media {
   position: absolute;
@@ -10,15 +8,13 @@
   height: 100%;
 }
 
-/**
- * A fluid media wrapper provides the ability to maintain a consistent aspect ratio for video and media content while allowing that content to scale to a maximum width in a responsive layout.
- *
- * @param {List} $ratio (16 9) - an aspect ratio to maintain
- *
- * @throws `$ratio` must be a list with two values.
- *
- * @requires {mixin} fluid-media-wrapper__media
- */
+/// A fluid media wrapper provides the ability to maintain a consistent aspect ratio for video and media content while allowing that content to scale to a maximum width in a responsive layout.
+///
+/// @param {List} $ratio [16 9] - an aspect ratio to maintain
+///
+/// @throws `$ratio` must be a list with two values.
+///
+/// @requires {mixin} fluid-media-wrapper__media
 
 @mixin fluid-media-wrapper($ratio: 16 9) {
   @if length($ratio) < 2 or length($ratio) > 2 {

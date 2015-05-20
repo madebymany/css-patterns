@@ -1,8 +1,6 @@
-/**
- * Visually hides elements without hiding them from screen readers or crawlers.
- *
- * @link http://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/css.md#visuallyhidden
- */
+/// Visually hides elements without hiding them from screen readers or crawlers.
+///
+/// @link http://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/css.md#visuallyhidden
 
 @mixin visually-hidden {
   border: 0;
