@@ -1,19 +1,8 @@
 /**
  * Removes bullet point styles from a list and its children.
- *
- * @param {Bool} $extend (true) - extend or include this pattern
  */
 
-@mixin unbulleted-list($extend: true) {
-  @if $extend {
-    @extend %unbulleted-list;
-  }
-  @else {
-    padding: 0;
-    list-style-type: none;
-  }
-}
-
-%unbulleted-list {
-  @include unbulleted-list($extend: false);
+@mixin unbulleted-list {
+  padding: 0;
+  list-style-type: none;
 }

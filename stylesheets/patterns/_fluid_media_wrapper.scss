@@ -1,38 +1,26 @@
 /**
  * For use with `fluid-media-wrapper` where the child is not an `embed`, `iframe`, or `object` element.
- *
- * @param {Bool} $extend (true) - extend or include this pattern
  */
 
-@mixin fluid-media-wrapper__media($extend: true) {
-  @if $extend {
-    @extend %fluid-media-wrapper__media;
-  }
-  @else {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-%fluid-media-wrapper__media {
-  @include fluid-media-wrapper__media($extend: false);
+@mixin fluid-media-wrapper__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /**
  * A fluid media wrapper provides the ability to maintain a consistent aspect ratio for video and media content while allowing that content to scale to a maximum width in a responsive layout.
  *
  * @param {List} $ratio (16 9) - an aspect ratio to maintain
- * @param {Bool} $extend (true) - extend or include this pattern
  *
  * @throws `$ratio` must be a list with two values.
  *
  * @requires {mixin} fluid-media-wrapper__media
  */
 
-@mixin fluid-media-wrapper($ratio: 16 9, $extend: true) {
+@mixin fluid-media-wrapper($ratio: 16 9) {
   @if length($ratio) < 2 or length($ratio) > 2 {
     @warn "#{inspect($ratio)} must be a list with two values.";
   }
@@ -43,6 +31,6 @@
   embed,
   iframe,
   object {
-    @include fluid-media-wrapper__media($extend);
+    @include fluid-media-wrapper__media;
   }
 }

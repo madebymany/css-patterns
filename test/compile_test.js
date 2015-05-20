@@ -9,10 +9,10 @@ describe('compiling patterns', function() {
     var generatedCss = sass.renderSync({
       file: __dirname + '/fixtures/compile.scss',
       includePaths: patterns.includePaths,
-      outputStyle: 'expanded'
+      outputStyle: 'compressed'
     });
-    var expectedCssFile = __dirname + '/expectations/compile.css';
-    var expectedCss     = fs.readFileSync(expectedCssFile, {encoding: 'utf8'});
+    var expectedCss = fs.readFileSync(
+      __dirname + '/expectations/compile.css', {encoding: 'utf8'}).trim();
     assert.equal(generatedCss, expectedCss);
   });
 

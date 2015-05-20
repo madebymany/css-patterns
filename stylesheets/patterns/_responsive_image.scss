@@ -1,22 +1,11 @@
 /**
  * Scalable images.
  *
- * @param {Bool} $extend (true) - extend or include this pattern
- *
  * @link http://css-tricks.com/rundown-of-handling-flexible-media
  */
 
-@mixin responsive-image($extend: true) {
-  @if $extend {
-    @extend %responsive-image;
-  }
-  @else {
-    display: block;
-    width: 100%;
-    -ms-interpolation-mode: bicubic; // <= IE7
-  }
-}
-
-%responsive-image {
-  @include responsive-image($extend: false);
+@mixin responsive-image {
+  display: block;
+  width: 100%;
+  -ms-interpolation-mode: bicubic; // <= IE7
 }

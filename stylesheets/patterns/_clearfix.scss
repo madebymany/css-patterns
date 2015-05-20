@@ -1,28 +1,17 @@
 /**
  * Clearfix with an overflow.
  *
- * @param {Bool} $extend (true) - extend or include this pattern
- *
  * @link http://github.com/h5bp/html5-boilerplate
  */
 
-@mixin clearfix($extend: true) {
-  @if $extend {
-    @extend %clearfix;
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
   }
-  @else {
-    &:before,
-    &:after {
-      content: " ";
-      display: table;
-    }
 
-    &:after {
-      clear: both;
-    }
+  &:after {
+    clear: both;
   }
-}
-
-%clearfix {
-  @include clearfix($extend: false);
 }
