@@ -1,47 +1,21 @@
-/**
- * Allows vertical centering of elements with unknown dimensions.
- *
- * @param {Bool} $extend (true) - extend or include this pattern
- *
- * @link http://css-tricks.com/centering-in-the-unknown
- */
+/// Allows vertical centering of elements with unknown dimensions.
+///
+/// @link http://css-tricks.com/centering-in-the-unknown
 
-@mixin vertical-align($extend: true) {
-  @if $extend {
-    @extend %vertical-align;
-  }
-  @else {
-    &:after {
-      content: "";
-      height: 100%;
-      display: inline-block;
-      vertical-align: middle;
-    }
+@mixin vertical-align {
+  &:after {
+    content: "";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
-%vertical-align {
-  @include vertical-align($extend: false);
-}
+/// The element to be vertically centred.
 
-/**
- * The element to be vertically centred.
- *
- * @param {Bool} $extend (true) - extend or include this pattern
- */
-
-@mixin vertical-align__child($extend: true) {
-  @if $extend {
-    @extend %vertical-align__child;
+@mixin vertical-align__child {
+  &:after {
+    display: inline-block;
+    vertical-align: middle;
   }
-  @else {
-    &:after {
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
-}
-
-%vertical-align__child {
-  @include vertical-align__child($extend: false);
 }

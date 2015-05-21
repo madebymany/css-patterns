@@ -2,8 +2,4 @@
 
 .test {
   @include clearfix;
-
-  @media (min-width: 1px) {
-    @include clearfix(false);
-  }
 }

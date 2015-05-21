@@ -1,31 +1,34 @@
-var assert  = require('assert')
-  , sass    = require('node-sass')
-  , patterns = require('../')
-  , fs      = require('fs');
+var fs = require('fs');
+var assert = require('assert');
+var patterns = require('../');
+var sass = require('node-sass');
 
-describe('compiling patterns', function() {
+describe('compiling patterns', function () {
 
-  it('should compile to css when importing patterns', function() {
-    var generatedCss = sass.renderSync({
+  it('should compile to css when importing patterns', function () {
+    var generated = sass.renderSync({
       file: __dirname + '/fixtures/compile.scss',
       includePaths: patterns.includePaths,
-      outputStyle: 'expanded'
+      outputStyle: 'compressed'
+    }).css.toString('utf-8');
+
+    var expected = fs.readFileSync(__dirname + '/expectations/compile.css', {
+      encoding: 'utf8'
     });
-    var expectedCssFile = __dirname + '/expectations/compile.css';
-    var expectedCss     = fs.readFileSync(expectedCssFile, {encoding: 'utf8'});
-    assert.equal(generatedCss, expectedCss);
+
+    assert.equal(generated, expected);
   });
 
-  it('should not throw errors for features', function(done) {
+  it('should not throw errors for features', function (done) {
     sass.render({
       file: __dirname + '/fixtures/features.scss',
-      includePaths: patterns.includePaths,
-      error: function(err) {
+      includePaths: patterns.includePaths
+    }, function (err) {
+      if (err) {
         throw new Error(err);
-      },
-      success: function(css) {
-        done();
       }
+
+      done();
     });
   });
 

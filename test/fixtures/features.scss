@@ -2,160 +2,80 @@
 
 .clearfix {
   @include clearfix;
-
-  @media (min-width: 1px) {
-    @include clearfix(false);
-  }
 }
 
 .expand-click-area {
   @include expand-click-area;
-
-  @media (min-width: 1px) {
-    @include expand-click-area(false);
-  }
 }
 
 .float-list {
   @include float-list;
-
-  @media (min-width: 1px) {
-    @include float-list(false);
-  }
 }
 
 .float-list__item {
   @include float-list__item;
-
-  @media (min-width: 1px) {
-    @include float-list__item(false);
-  }
 }
 
 .fluid-media-wrapper {
   @include fluid-media-wrapper(1 1);
-
-  @media (min-width: 1px) {
-    @include fluid-media-wrapper(1 1, false);
-  }
 }
 
 .image-replacement {
   @include image-replacement;
-
-  @media (min-width: 1px) {
-    @include image-replacement(false);
-  }
 }
 
 .inline-list {
   @include inline-list;
-
-  @media (min-width: 1px) {
-    @include inline-list(false);
-  }
 }
 
 .inline-list__item {
   @include inline-list__item;
-
-  @media (min-width: 1px) {
-    @include inline-list__item(false);
-  }
 }
 
 .media-box {
   @include media-box;
-
-  @media (min-width: 1px) {
-    @include media-box(false);
-  }
 }
 
 .media-box__content {
   @include media-box__content;
-
-  @media (min-width: 1px) {
-    @include media-box__content(false);
-  }
 }
 
 .media-box__aside-left {
   @include media-box__aside-left;
-
-  @media (min-width: 1px) {
-    @include media-box__aside-left(false);
-  }
 }
 
 .media-box__aside-right {
   @include media-box__aside-right;
-
-  @media (min-width: 1px) {
-    @include media-box__aside-right(false);
-  }
 }
 
 .responsive-image {
   @include responsive-image;
-
-  @media (min-width: 1px) {
-    @include responsive-image(false);
-  }
 }
 
 .unbulleted-list {
   @include unbulleted-list;
-
-  @media (min-width: 1px) {
-    @include unbulleted-list(false);
-  }
 }
 
 .unstyled-anchor {
   @include unstyled-anchor;
-
-  @media (min-width: 1px) {
-    @include unstyled-anchor(false);
-  }
 }
 
 .unstyled-input {
   @include unstyled-input;
-
-  @media (min-width: 1px) {
-    @include unstyled-input(false);
-  }
 }
 
 .unstyled-list {
   @include unstyled-list;
-
-  @media (min-width: 1px) {
-    @include unstyled-list(false);
-  }
 }
 
 .vertical-align {
   @include vertical-align;
-
-  @media (min-width: 1px) {
-    @include vertical-align(false);
-  }
 }
 
 .vertical-align__child {
   @include vertical-align__child;
-
-  @media (min-width: 1px) {
-    @include vertical-align__child(false);
-  }
 }
 
 .visually-hidden {
   @include visually-hidden;
-
-  @media (min-width: 1px) {
-    @include visually-hidden(false);
-  }
 }

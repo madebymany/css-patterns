@@ -1,19 +1,6 @@
-/**
- * Displays an anchor as plain text.
- *
- * @param {Bool} $extend (true) - extend or include this pattern
- */
+/// Displays an anchor as plain text.
 
-@mixin unstyled-anchor($extend: true) {
-  @if $extend {
-    @extend %unstyled-anchor;
-  }
-  @else {
-    text-decoration: none;
-    color: inherit;
-  }
-}
-
-%unstyled-anchor {
-  @include unstyled-anchor($extend: false);
+@mixin unstyled-anchor {
+  text-decoration: none;
+  color: inherit;
 }

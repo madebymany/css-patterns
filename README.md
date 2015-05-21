@@ -6,12 +6,12 @@ In addition we've been compiling a library of common CSS patterns for some time 
 
 The way we write CSS tends to follow BEM syntax and closely resembles some OOCSS practices. However, we tend to prefer using the Sass ``@include`` method to add patterns to CSS rules, rather than littering our elements with multiple styles.
 
-For instance, we tend to favour this approach with placeholders:
+For instance, we tend to favour this approach with mixins:
 
 ```scss
 .my-list-element {
   @include inline-list;
-  background:blue;
+  background: blue;
 }
 ```
 
@@ -24,7 +24,7 @@ Rather than this one with additional classes:
 
 ```scss
 .my-list-element {
-  background:blue;
+  background: blue;
 }
 ```
 
@@ -42,25 +42,8 @@ Most of these patterns were developed by much smarter people than us and this li
   @include unstyled-list;
 }
 ```
-These patterns are a collection on Sass placeholders and mixins. Much like Bourbon, nothing will be added to your compiled CSS that you did not explicitly ``@include`` or ``@extend``.
 
-Unless specifically mentioned in the documentation, each pattern can be used as either a mixin with``@include`` or a placeholder with ``@extend``.
-
-In order to `@extend` a mixin within a media query, we've implemented @HugoGiraudel's excellent technique. Example:
-
-```scss
-.list {
-  margin: 20px;
-}
-
-@media (min-width: 320px) {
-  .list {
-    @include unstyled-list(false);
-  }
-}
-```
-
-See http://hugogiraudel.com/2014/03/31/getting-the-most-out-of-sass-placeholders/.
+These patterns are a collection on Sass mixins. Much like Bourbon, nothing will be added to your compiled CSS that you did not explicitly ``@include``.
 
 ## Installing with Bower
 
@@ -112,9 +95,9 @@ In your root stylesheet include the following:
 
 1. Add a new pattern with documentation
 2. Update tests to reflect your change and `npm test`
-3. Test docs locally with `gulp docs`
+3. Test docs locally with `npm run docs`
 4. Commit and push
-5. `gulp publish-docs`
+5. `npm run publish-docs`
 6. View at http://madebymany.github.io/css-patterns/
 
 ## Contributors

@@ -1,19 +1,8 @@
-/**
- * A list without styling.
- *
- * @param {Bool} $extend (true) - extend or include this pattern
- */
+/// A list without styling.
+///
+/// @requires {mixin} unbulleted-list
 
-@mixin unstyled-list($extend: true) {
-  @if $extend {
-    @extend %unstyled-list;
-  }
-  @else {
-    @include unbulleted-list($extend);
-    margin: 0;
-  }
-}
-
-%unstyled-list {
-  @include unstyled-list($extend: false);
+@mixin unstyled-list {
+  @include unbulleted-list;
+  margin: 0;
 }
