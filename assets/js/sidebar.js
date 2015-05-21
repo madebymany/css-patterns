@@ -12,6 +12,9 @@
       // Index attribute
       indexAttribute: 'data-slug',
 
+      // Toggle button
+      toggleBtn: '.js-btn-toggle',
+
       // Automatic initialization
       init: true
     }, conf || {});
@@ -30,6 +33,30 @@
     this.load();
     this.updateDOM();
     this.bind();
+    this.loadToggle();
+  };
+
+
+  /**
+   * Load sidebar toggle
+   */
+  Sidebar.prototype.loadToggle = function () {
+    $('<span />', {
+      'class': 'layout-toggle',
+      'html': '&times;',
+      'data-alt': '&#8594;'
+    }).appendTo( $('.header') );
+
+    $('.layout-toggle').on('click', function () {
+      var $this = $(this);
+      var alt;
+
+      $('body').toggleClass('sidebar-closed');
+
+      alt = $this.html();
+      $this.html($this.data('alt'));
+      $this.data('alt', alt);
+    });
   };
 
   /**
@@ -49,13 +76,12 @@
   Sidebar.prototype.buildIndex = function () {
     var index = {};
     var $item;
-    var self = this;
 
-    this.conf.nodes.each(function () {
-      $item = $(this);
+    this.conf.nodes.each($.proxy(function (index, item) {
+      $item = $(item);
 
-      index[$item.attr(self.conf.indexAttribute)] = !$item.hasClass(self.conf.collapsedClass);
-    });
+      index[$item.attr(this.conf.indexAttribute)] = !$item.hasClass(this.conf.collapsedClass);
+    }, this));
 
     return index;
   };
@@ -68,7 +94,7 @@
 
     for (item in this.index) {
       if (this.index[item] === false) {
-        $('[' + this.conf.indexAttribute + '="' + item + '"]').next().addClass(this.conf.collapsedClass);
+        $('[' + this.conf.indexAttribute + '="' + item + '"]').addClass(this.conf.collapsedClass);
       }
     }
   };
@@ -88,14 +114,38 @@
    * Bind UI events
    */
   Sidebar.prototype.bind = function () {
-    var $item;
-    var slug;
+    var $item, slug, fn, text;
+    var collapsed = false;
 
     // Save index in localStorage
     global.onbeforeunload = $.proxy(function () {
       this.save();
     }, this);
 
+    // Toggle all
+    $(this.conf.toggleBtn).on('click', $.proxy(function (event) {
+      $node = $(event.target);
+
+      text = $node.attr('data-alt');
+      $node.attr('data-alt', $node.text());
+      $node.text(text);
+
+      fn = collapsed === true ? 'removeClass' : 'addClass';
+
+      this.conf.nodes.each($.proxy(function (index, item) {
+        $item = $(item);
+        slug = $item.attr(this.conf.indexAttribute);
+
+        this.index[slug] = collapsed;
+
+        $('[' + this.conf.indexAttribute + '="' + slug + '"]')[fn](this.conf.collapsedClass);
+      }, this));
+
+      collapsed = !collapsed;
+      this.save();
+    }, this));
+
+    // Toggle item
     this.conf.nodes.on('click', $.proxy(function (event) {
       $item = $(event.target);
       slug = $item.attr(this.conf.indexAttribute);
@@ -104,7 +154,7 @@
       this.index[slug] = !this.index[slug];
 
       // Update DOM
-      $item.next().toggleClass(this.conf.collapsedClass);
+      $item.toggleClass(this.conf.collapsedClass);
     }, this));
   };
 
