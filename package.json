@@ -1,6 +1,6 @@
 {
   "name": "css-patterns",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A CSS pattern library for Sass",
   "main": "index.js",
   "scripts": {
