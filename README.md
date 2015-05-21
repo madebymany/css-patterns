@@ -109,6 +109,10 @@ In your root stylesheet include the following:
 
 ## Changelog
 
+### 0.2.0
+
+* Convert all patterns to mixins to promote usage with ``@include``
+
 ### 0.1.0
 
 * Move to @HugoGiraudel's mixin technique. Backwards compatible.
